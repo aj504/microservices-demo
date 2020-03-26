@@ -990,8 +990,6 @@ spec:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  annotations:
-    harness.io/direct-apply: "true"
   name: default-view
   namespace: sock-shop-dev
 roleRef:
