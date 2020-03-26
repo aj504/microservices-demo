@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   creationTimestamp: null
   labels:
     io.kompose.service: user-db
@@ -75,7 +75,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   creationTimestamp: null
   labels:
     io.kompose.service: user-db
@@ -95,7 +95,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: rabbitmq
   labels:
     name: rabbitmq
@@ -140,7 +140,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: rabbitmq
   labels:
     name: rabbitmq
@@ -175,7 +175,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: carts-db
   namespace: sock-shop-dev
 spec:
@@ -227,7 +227,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: carts-db
   namespace: sock-shop-dev
 spec:
@@ -242,7 +242,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: catalogue-db
   labels:
     name: catalogue-db
@@ -285,7 +285,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: catalogue-db
   labels:
     name: catalogue-db
@@ -314,7 +314,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: orders-db
   namespace: sock-shop-dev
 spec:
@@ -366,7 +366,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: orders-db
   namespace: sock-shop-dev
 spec:
@@ -381,7 +381,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: carts
   namespace: sock-shop-dev
 spec:
@@ -446,7 +446,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: carts
   labels:
     app: carts
@@ -464,7 +464,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: catalogue
   namespace: sock-shop-dev
 spec:
@@ -472,7 +472,7 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 3.1.1.0435
@@ -521,7 +521,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: catalogue
   labels:
     app: catalogue
@@ -538,7 +538,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: front-end
   namespace: sock-shop-dev
 spec:
@@ -546,7 +546,7 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.5.0.3486
@@ -596,7 +596,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: front-end
   labels:
     app: front-end
@@ -614,7 +614,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: orders
   namespace: sock-shop-dev
 spec:
@@ -622,7 +622,7 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.1.0.1578
@@ -675,7 +675,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: orders
   labels:
     app: orders
@@ -692,7 +692,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: payment
   namespace: sock-shop-dev
 spec:
@@ -700,7 +700,7 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.1.0.8367
@@ -750,7 +750,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: payment
   labels:
     app: payment
@@ -767,7 +767,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: queue-master
   namespace: sock-shop-dev
 spec:
@@ -775,7 +775,7 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.0.1.0253
@@ -826,7 +826,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: queue-master
   labels:
     app: queue-master
@@ -843,7 +843,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: shipping
   namespace: sock-shop-dev
 spec:
@@ -851,7 +851,7 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.1.0.7904
@@ -902,7 +902,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: shipping
   labels:
     app: shipping
@@ -925,7 +925,7 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.5.0.0073
@@ -974,7 +974,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: user
   labels:
     app: user
@@ -991,7 +991,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   annotations:
-    harness.io/direct-apply: true
+    harness.io/direct-apply: "true"
   name: default-view
   namespace: sock-shop-dev
 roleRef:
