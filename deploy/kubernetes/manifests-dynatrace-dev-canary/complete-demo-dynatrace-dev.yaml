@@ -16,7 +16,6 @@ spec:
     metadata:
       creationTimestamp: null
       annotations:
-        harness.io/direct-apply: true
         sidecar.istio.io/inject: "false"
         dynatrace/instrument: "false"
         #pipeline.stage: dev
@@ -59,7 +58,6 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  harness.io/direct-apply: true
   creationTimestamp: null
   labels:
     io.kompose.service: user-db-mongodata
@@ -106,7 +104,6 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
         sidecar.istio.io/inject: "false"
         prometheus.io/scrape: "false"
         dynatrace/instrument: "false"
@@ -163,8 +160,6 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  annotations:
-    harness.io/direct-apply: true
   name: carts-db-mongodata
   namespace: sock-shop-dev
 spec:
@@ -189,7 +184,6 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
         sidecar.istio.io/inject: "false"
         dynatrace/instrument: "false"
         #pipeline.stage: dev
@@ -257,7 +251,6 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
         sidecar.istio.io/inject: "false"
         dynatrace/instrument: "false"
         #pipeline.stage: dev
@@ -306,8 +299,6 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  annotations:
-    harness.io/direct-apply: true
   name: orders-db-mongodata
   namespace: sock-shop-dev
 spec:
@@ -332,7 +323,6 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
         sidecar.istio.io/inject: "false"
         dynatrace/instrument: "false"
         #pipeline.stage: dev
@@ -398,7 +388,6 @@ spec:
   template:
     metadata:
       annotations:
-        harness.io/direct-apply: true
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 2.3.0.2981
