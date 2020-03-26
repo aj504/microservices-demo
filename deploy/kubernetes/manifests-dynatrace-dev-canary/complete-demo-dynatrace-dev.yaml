@@ -74,7 +74,7 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  annnotations:
+  annotations:
     harness.io/direct-apply: true
   creationTimestamp: null
   labels:
