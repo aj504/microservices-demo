@@ -9,6 +9,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         pipeline.stage: dev
         pipeline.build: 1.1.0.1578
