@@ -61,6 +61,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: orders
   labels:
     app: orders

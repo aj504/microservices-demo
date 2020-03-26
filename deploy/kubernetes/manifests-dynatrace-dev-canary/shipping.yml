@@ -59,6 +59,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: shipping
   labels:
     app: shipping
