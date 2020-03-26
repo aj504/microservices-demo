@@ -74,7 +74,8 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  harness.io/direct-apply: true
+  annnotations:
+    harness.io/direct-apply: true
   creationTimestamp: null
   labels:
     io.kompose.service: user-db
