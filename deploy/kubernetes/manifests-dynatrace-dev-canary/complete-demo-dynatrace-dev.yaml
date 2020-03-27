@@ -1,6 +1,8 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   creationTimestamp: null
   labels:
     io.kompose.service: user-db
@@ -17,6 +19,7 @@ spec:
     metadata:
       creationTimestamp: null
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         dynatrace/instrument: "false"
         #pipeline.stage: dev
