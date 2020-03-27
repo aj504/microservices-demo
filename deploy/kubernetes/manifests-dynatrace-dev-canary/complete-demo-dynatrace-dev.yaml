@@ -67,6 +67,8 @@ metadata:
   name: user-db-mongodata
   namespace: sock-shop-dev
 spec:
+  annotations:
+    harness.io/direct-apply: "true"
   accessModes:
   - ReadWriteOnce
   resources:
@@ -85,6 +87,8 @@ metadata:
   name: user-db
   namespace: sock-shop-dev
 spec:
+  annotations:
+    harness.io/direct-apply: "true"
   ports:
   - name: "27017"
     port: 27017
@@ -197,6 +201,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         dynatrace/instrument: "false"
         #pipeline.stage: dev
@@ -271,6 +276,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         dynatrace/instrument: "false"
         #pipeline.stage: dev
@@ -352,6 +358,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         dynatrace/instrument: "false"
         #pipeline.stage: dev
@@ -423,6 +430,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 2.3.0.2981
@@ -509,6 +517,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 3.1.1.0435
@@ -585,6 +594,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.5.0.3486
@@ -663,6 +673,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.1.0.1578
@@ -743,6 +754,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.1.0.8367
@@ -820,6 +832,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.0.1.0253
@@ -976,6 +989,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         #pipeline.stage: dev
         #pipeline.build: 1.5.0.0073
