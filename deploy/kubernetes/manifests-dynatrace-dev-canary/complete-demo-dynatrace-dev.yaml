@@ -53,39 +53,39 @@ spec:
         persistentVolumeClaim:
           claimName: user-db-mongodata
 ---
-#apiVersion: v1
-#kind: PersistentVolumeClaim
-#metadata:
-#  creationTimestamp: null
-#  labels:
-#    io.kompose.service: user-db-mongodata
-#  name: user-db-mongodata
-#  namespace: sock-shop-dev
-#spec:
-#  accessModes:
-#  - ReadWriteOnce
-#  resources:
-#    requests:
-#      storage: 100Mi
-#status: {}
-#---
-#apiVersion: v1
-#kind: Service
-#metadata:
-#  creationTimestamp: null
-#  labels:
-#    io.kompose.service: user-db
-#  name: user-db
-#  namespace: sock-shop-dev
-#spec:
-#  ports:
-#  - name: "27017"
-#    port: 27017
-#    targetPort: 27017
-#  selector:
-#    io.kompose.service: user-db
-#status:
-#  loadBalancer: {}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: user-db-mongodata
+  name: user-db-mongodata
+  namespace: sock-shop-dev
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: user-db
+  name: user-db
+  namespace: sock-shop-dev
+spec:
+  ports:
+  - name: "27017"
+    port: 27017
+    targetPort: 27017
+  selector:
+    io.kompose.service: user-db
+status:
+  loadBalancer: {}
 #---
 #apiVersion: extensions/v1beta1
 #kind: Deployment
