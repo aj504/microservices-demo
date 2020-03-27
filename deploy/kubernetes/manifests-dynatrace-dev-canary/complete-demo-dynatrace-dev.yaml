@@ -111,6 +111,7 @@ spec:
   template:
     metadata:
       annotations:
+        harness.io/direct-apply: "true"
         sidecar.istio.io/inject: "false"
         prometheus.io/scrape: "false"
         dynatrace/instrument: "false"
