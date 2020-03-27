@@ -85,8 +85,6 @@ metadata:
   name: user-db
   namespace: sock-shop-dev
 spec:
-  annotations:
-    harness.io/direct-apply: "true"
   ports:
   - name: "27017"
     port: 27017
