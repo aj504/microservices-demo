@@ -422,11 +422,6 @@ spec:
   selector:
     matchLabels:
       app: carts
-      stage: dev
-      release: stable
-      version: "2.3"
-      tier: "business"
-      product: "sockshop"
   template:
     metadata:
       annotations:
