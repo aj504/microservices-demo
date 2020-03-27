@@ -59,6 +59,8 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   creationTimestamp: null
   labels:
     io.kompose.service: user-db-mongodata
@@ -93,6 +95,8 @@ status:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: rabbitmq
   labels:
     name: rabbitmq
@@ -139,6 +143,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: rabbitmq
   labels:
     name: rabbitmq
@@ -160,6 +166,8 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: carts-db-mongodata
   namespace: sock-shop-dev
 spec:
@@ -173,6 +181,8 @@ status: {}
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: carts-db
   namespace: sock-shop-dev
 spec:
@@ -226,6 +236,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: carts-db
   namespace: sock-shop-dev
 spec:
@@ -239,6 +251,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: catalogue-db
   labels:
     name: catalogue-db
@@ -287,6 +301,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: catalogue-db
   labels:
     name: catalogue-db
@@ -301,6 +317,8 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: orders-db-mongodata
   namespace: sock-shop-dev
 spec:
@@ -314,6 +332,8 @@ status: {}
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: orders-db
   namespace: sock-shop-dev
 spec:
@@ -371,6 +391,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: orders-db
   namespace: sock-shop-dev
 spec:
@@ -455,6 +477,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: carts
   labels:
     app: carts
@@ -471,6 +495,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: catalogue
   namespace: sock-shop-dev
 spec:
@@ -528,6 +554,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: catalogue
   labels:
     app: catalogue
@@ -543,6 +571,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: front-end
   namespace: sock-shop-dev
 spec:
@@ -601,6 +631,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: front-end
   labels:
     app: front-end
@@ -617,6 +649,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: orders
   namespace: sock-shop-dev
 spec:
@@ -678,6 +712,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: orders
   labels:
     app: orders
@@ -693,6 +729,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: payment
   namespace: sock-shop-dev
 spec:
@@ -751,6 +789,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: payment
   labels:
     app: payment
@@ -766,6 +806,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: queue-master
   namespace: sock-shop-dev
 spec:
@@ -825,6 +867,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: queue-master
   labels:
     app: queue-master
@@ -840,6 +884,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: shipping
   namespace: sock-shop-dev
 spec:
@@ -899,6 +945,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: shipping
   labels:
     app: shipping
@@ -914,6 +962,8 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: user
   namespace: sock-shop-dev
 spec:
@@ -971,6 +1021,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: user
   labels:
     app: user
@@ -986,6 +1038,8 @@ spec:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
+  annotations:
+    harness.io/direct-apply: "true"
   name: default-view
   namespace: sock-shop-dev
 roleRef:
