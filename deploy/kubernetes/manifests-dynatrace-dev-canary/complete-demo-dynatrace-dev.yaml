@@ -67,8 +67,6 @@ metadata:
   name: user-db-mongodata
   namespace: sock-shop-dev
 spec:
-  annotations:
-    harness.io/direct-apply: "true"
   accessModes:
   - ReadWriteOnce
   resources:
